@@ -1,0 +1,85 @@
+<div class="container headinglayout main-content" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%"
+    fxLayoutAlign="center">
+    <div fxFlex="100%">
+        <div class="wrapper">
+            <mat-card class="width-25">
+                <div class="card-profile">
+                    <img src="../../assets/images/profile.jpg.png" alt="Profile">
+                </div>
+                <div class="card-title">
+                    Jone Smith
+                </div>
+                <div class="card-post">
+                    CFA, CIC
+                </div>
+                <div class="card-member">
+                    <img src="../../assets/images/premium-icon.png" alt="Premium"> Premium member
+                </div>
+                <div class="card-educution">
+                    <span class="material-icons">school</span> <span>Insurance Agent,Attorney, Accountant</span>
+                </div>
+                <div class="divider"></div>
+                <a href="#" class="send-mail"><mat-icon>email</mat-icon> Send an Email</a>
+            </mat-card>
+            <mat-card class="width-75">
+                <mat-card-content>
+                    <div class="business">
+                        Business Details
+                    </div>
+                    <div class="profile-wrapper">
+                        <div class="profile-card">
+                            <div class="profile-flex">
+                                <div><mat-icon>person</mat-icon> Profile</div>
+                                <button mat-fab extended color="primary" (click)="openDialog()">
+                                    Edit Profile
+                                </button>
+                            </div>
+                            <div class="form-wrapper">
+                                <div class="form-flex">
+                                    <div class="f-name">Name:</div>
+                                    <div class="f-value">{{datas.name}}<input type="hidden" 
+                                        [(ngModel)]="datas.name" name="name" /></div>
+                                </div>
+                                <div class="form-flex">
+                                    <div class="f-name">Doamin:</div>
+                                    <div class="f-value">{{datas.domain}}
+                                       <input type="hidden" 
+                                        [(ngModel)]="datas.domain"/>
+                                    </div>
+                                </div>
+                                <div class="form-flex">
+                                    <div class="f-name">Gender:</div>
+                                    <div class="f-value">{{datas.gender}}
+                                         <input type="hidden" 
+                                        [(ngModel)]="datas.gender" />
+                                    </div>
+                                </div>
+                                <div class="form-flex">
+                                    <div class="f-name">Date of Birth:</div>
+                                    <div class="f-value">{{datas.dob}}
+                                         <input type="hidden" 
+                                        [(ngModel)]="datas.dob" />
+                                    </div>
+                                </div>
+                                <div class="form-flex">
+                                    <div class="f-name">Phone Number:</div>
+                                    <div class="f-value">{{datas.phone}}
+                                        <input type="hidden" 
+                                        [(ngModel)]="datas.phone" />
+                                    </div>
+                                </div>
+                                <div class="form-flex">
+                                    <div class="f-name">Location:</div>
+                                    <div class="f-value">{{datas.location}}
+                                        <input type="hidden" 
+                                        [(ngModel)]="datas.location" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>

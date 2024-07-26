@@ -1,0 +1,343 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+html,
+body {
+  height: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: #000;
+  font-family: "Public Sans", sans-serif;
+}
+.mat-mdc-button:not(:disabled) {
+  color: #000 !important;
+}
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+.p-0 {
+  padding: 0;
+}
+.m-0 {
+  margin: 0;
+}
+a {
+  color: initial;
+  text-decoration: none;
+}
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+/******* main Ssection *******/
+.main-section {
+  height: calc(100vh - 123px);
+  overflow: auto;
+  padding: 30px;
+}
+.btn-style {
+  border-radius: 4px !important;
+  padding: 8px 60px !important;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff !important;
+  background: #1e88e5 !important;
+}
+.btn-style .mat-mdc-extended-fab .mdc-fab__ripple {
+  border-radius: 0 !important;
+}
+.mat-mdc-fab:hover .mat-mdc-button-persistent-ripple::before {
+  opacity: 0 !important;
+}
+/********Main-content*******/
+.main-content {
+  padding: 15px;
+  .wrapper {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    gap: 15px;
+    margin-top: 10px;
+    .width-25 {
+      display: flex;
+      flex-basis: 25%;
+      background-color: #fff;
+      box-shadow: 5px 5px 20px rgb(0 0 0 / 1%), 0 10px 10px rgb(0 0 0 / 11%);
+      padding: 15px 30px 30px;
+      .card-profile img {
+        height: 125px;
+        object-fit: contain;
+      }
+      .card-title {
+        font-size: 26px;
+        text-align: center;
+        padding-top: 15px;
+        font-weight: 500;
+      }
+      .card-post {
+        font-size: 18px;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 400;
+        color: #8b8c8e;
+      }
+      .card-member {
+        font-size: 16px;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 400;
+        img {
+          width: 18px;
+          display: inline-block;
+          margin-right: 10px;
+        }
+      }
+      .card-educution {
+        display: flex;
+        font-size: 16px;
+        font-weight: 400;
+        gap: 15px;
+        padding-top: 20px;
+      }
+      .divider {
+        margin: 18px 0;
+        height: 1px;
+        background-color: #e5e1e2;
+      }
+      .send-mail {
+        color: #c62128;
+        text-decoration: none;
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+    .width-75 {
+      display: flex;
+      flex-basis: 75%;
+      background-color: #fff;
+      box-shadow: 5px 5px 20px rgb(0 0 0 / 1%), 0 10px 10px rgb(0 0 0 / 11%);
+      .mat-mdc-card-content {
+        padding: 0;
+        border: 1px solid #e7eacd;
+        .business {
+          background-color: #e7eacd;
+          padding: 20px 25px;
+          font-size: 20px;
+          font-weight: 500;
+        }
+        .profile-wrapper {
+          padding: 20px;
+          .profile-card {
+            border: 1px solid #dcdbe0;
+            padding: 15px 20px;
+            .profile-flex {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              width: 100%;
+              padding-bottom: 8px;
+              border-bottom: 2px solid #f5f5f5;
+              div {
+                font-size: 16px;
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                mat-icon {
+                  color: #737a34;
+                }
+              }
+              button {
+                padding: 15px 40px;
+                border-radius: 5px;
+                box-shadow: none;
+              }
+            }
+            .form-wrapper {
+              padding-top: 15px;
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              .form-flex {
+                display: flex;
+                align-items: center;
+                div.f-name {
+                  flex-basis: 30%;
+                  font-weight: 500;
+                }
+                .f-value {
+                  flex-basis: 70%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.mat-mdc-radio-button
+  .mdc-radio
+  .mdc-radio__native-control:enabled:not(:checked)
+  + .mdc-radio__background
+  .mdc-radio__outer-circle {
+  border-color: rgb(0 0 0) !important;
+}
+.mdc-form-field {
+  input {
+    max-width: 100px;
+    width: 100px;
+    color: #000;
+  }
+  label {
+    color: #8b8c8e !important;
+  }
+}
+.mat-mdc-dialog-container .mdc-dialog__title {
+  color: #000 !important;
+}
+textarea {
+  padding: 10px 15px;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  width: 300px;
+  background: #dcdbe0;
+}
+.mat-mdc-dialog-container .mdc-dialog__surface {
+  background-color: #fff !important;
+  color: #000 !important;
+  .form-group {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    color: #000 !important;
+    margin-bottom: 10px;
+    label {
+      flex-basis: 30%;
+    }
+    input {
+      padding: 10px 15px;
+      outline: none;
+      border-radius: 5px;
+      border: none;
+      width: 300px;
+      background: #dcdbe0;
+    }
+  }
+  .mdc-dialog__actions {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+  }
+  button {
+    padding: 15px 40px;
+    border-radius: 5px;
+    box-shadow: none;
+    background-color: green;
+    outline: none;
+    color: #fff;
+    border: none;
+    margin-top: 50px;
+    font-family: "Roboto";
+    letter-spacing: 0.04em;
+    font-weight: 500;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 991px) {
+  .main-content {
+    .wrapper {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      .width-25,
+      .width-75 {
+        width: 100%;
+        .card-educution {
+          text-align: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .main-section {
+    height: auto;
+    overflow: auto;
+    padding: 30px;
+  }
+}
+@media (max-width: 425px) {
+  .profile-flex {
+    flex-direction: column !important;
+    gap: 20px;
+    align-items: flex-start !important;
+  }
+  .form-flex div.f-name {
+    flex-basis: 50% !important;
+  }
+}
+
+/******* Migration Progress bar ******/
+.migration-container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(100%);
+  background: white;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 9;
+  left: 0;
+  width: 100%;
+  &.active {
+    transform: translateY(0);
+  }
+  .wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    .img-wrapper {
+      padding: 16px 40px;
+      background: #1e88e5;
+      img {
+        max-width: 30px;
+        object-fit: contain;
+      }
+    }
+    .progrees-bar {
+      width: 100%;
+      padding: 0 40px;
+      .text-wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        margin-bottom: 20px;
+        span,
+        p {
+          font-size: 18px;
+          font-weight: 500;
+          margin: 0;
+        }
+      }
+    }
+  }
+}

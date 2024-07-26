@@ -1,0 +1,64 @@
+<header class="headinglayout"
+  [class.mobile-menu]="classApplied">
+  <div class="container">
+    <div fxFlex="100%" class="navbar">
+      <div class="logo">
+       <a href="."> <img src="../../assets/images/logo.webp" alt="logo"></a>
+      </div>
+      <div class="toggle-menu" (click)="toggleClass()">
+        <i></i>
+        <i></i>
+        <i></i>
+      </div>
+      <mat-nav-list class="menubar">
+        <div class="main-menu">
+          <a [matMenuTriggerFor]="homeMenu" routerLinkActive="active-link">
+            <mat-icon>how_to_reg</mat-icon>
+            Organization Structure 
+          </a>
+          <mat-menu #homeMenu="matMenu" yPosition="above">
+            <button mat-menu-item [routerLink]="'/home'">Home Page</button>
+          </mat-menu>
+          <a [routerLink]="'/trustees'" [matMenuTriggerFor]="congMenu" routerLinkActive="active-link">
+            <mat-icon>settings_overscan</mat-icon> Configurations 
+          </a>
+          <mat-menu #congMenu="matMenu" yPosition="above">
+            <button mat-menu-item>Item 1</button>
+            <button mat-menu-item>Item 2</button>
+          </mat-menu>
+          <a [routerLink]="'/professionals'" routerLinkActive="active-link">
+            <mat-icon>filter_none</mat-icon>
+            Professionals
+          </a>
+          <a [matMenuTriggerFor]="aboveMenu" routerLinkActive="active-link">
+            <mat-icon>settings</mat-icon> ELT
+          </a>
+          <mat-menu #aboveMenu="matMenu" yPosition="above">
+            <button mat-menu-item>Item 1</button>
+            <button mat-menu-item>Item 2</button>
+          </mat-menu>
+        </div>
+        
+      </mat-nav-list>
+      <div class="profile-menu">
+        <a [matMenuTriggerFor]="lang" class="p-0 m-0 profile-icon">
+         ENG
+        </a>
+        <mat-menu #lang="matMenu">
+          <button mat-menu-item>Hindi</button>
+          <button mat-menu-item>urdu</button>
+        </mat-menu>
+        <a href="#">
+          <mat-icon>notifications_none</mat-icon>
+        </a>
+        <a [matMenuTriggerFor]="profile" class="p-0 m-0 profile-icon">
+          <img src="../../assets/images/profile.jpg.png" alt="Profile" >
+        </a>
+        <mat-menu #profile="matMenu">
+          <button mat-menu-item [routerLink]="'/professionals'">Edit User</button>
+          <button mat-menu-item>Logout</button>
+        </mat-menu>
+    </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,49 @@
+<div class="home-layout" fxLayout="row" fxLayout.xs="column">
+  <button mat-fab extended class="btn-style" (click)="startMigration()">
+    Start
+  </button>
+</div>
+
+<div class="migration-container" *ngIf="!migrationComplete" [class.active]="isMigrationActive">
+  <div class="wrapper">
+    <div class="img-wrapper">
+      <img src="../../assets/images/boost.jpeg" alt="Boost">
+    </div>
+    <div class="progrees-bar">
+      <div class="text-wrapper">
+        <p>Migration Data selected environment</p>
+        <span class="percentage">{{ migrationProgress }}%</span>
+      </div>
+ 
+      <div class="custom-progress-bar">
+        <div class="custom-progress-bar-fill" [style.width.%]="migrationProgress"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="progress-info" *ngIf="isMigrationStarted">
+    <button mat-button 
+            [ngClass]="{
+              'toggle-btn': true,
+              'paused': !isMigrationActive,
+              'active': isMigrationActive
+            }"
+            (click)="toggleMigration()"> 
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+        <path fill="#fff" d="M182.6 470.6c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-9.2-9.2-11.9-22.9-6.9-34.9s16.6-19.8 29.6-19.8l256 0c12.9 0 24.6 7.8 29.6 19.8s2.2 25.7-6.9 34.9l-128 128z"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
+
+<div *ngIf="migrationComplete" class="success-popup">
+  <mat-icon class="close-btn" (click)="closeSuccessPopup()">close</mat-icon>
+  <div>
+    <mat-icon>done</mat-icon>
+    <div>
+      <h6>Success</h6>
+      <p>Migration applied successfully</p>
+    </div>
+  </div>
+</div>
